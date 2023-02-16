@@ -1,8 +1,12 @@
-const express = require('express');
+const express = require('express')
+
 const app = express();
 
-app.get('/', onHome).listen(420, console.log('Running on port: ${PORT}'));
+app.get('/', onhome)
+  .listen(1900)
 
-function onHome(req, res) {
-  res.send('hallo')
+app.use('/static', express.static('public'));
+
+function onhome(req, res) {
+  res.send('<h1>Hello Client</h1>')
 }
