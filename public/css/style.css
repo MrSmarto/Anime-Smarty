@@ -15,10 +15,10 @@
 
 /* https://dlo.mijnhva.nl/d2l/le/content/437099/Home */
 :root {
-	--zwartmain:rgb(0, 0, 0);	
+	--zwartmain: #000;	
 	--witmain:#fff;
-	--calltoactionGREEN: rgb(96, 233, 255);
-	--calltoactionBLUE: #fd44e8;
+	--calltoactionGREEN: #7ED957;
+	--calltoactionBLUE: #5CE1E6;
 
 	/* gradient */
 	/* Bron: https://www.joshwcomeau.com/gradient-generator/ */
