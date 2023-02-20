@@ -4,7 +4,7 @@
   "description": "Dit is voor mijn project-tech voor het leerjaar 2 van CMD.",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node server.js",
     "serve": "nodemon app.js",
     "build": "webpack --mode production"
   },
