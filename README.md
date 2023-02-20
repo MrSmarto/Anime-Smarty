@@ -6,6 +6,8 @@ Welkom! Dit is mijn respository voor mijn linking feature voor project-tech. Ani
 
 ## Het concept
 
+
+
 ## How to install
 
 ## Technologies
