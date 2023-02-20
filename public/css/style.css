@@ -1,3 +1,217 @@
-p {
-    color: red;
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+	box-sizing:border-box;  
+  }
+  
+  button:not(disabled) {
+	cursor:pointer;
+  }
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+/* https://dlo.mijnhva.nl/d2l/le/content/437099/Home */
+:root {
+	--zwartmain:rgb(0, 0, 0);	
+	--witmain:#fff;
+	--calltoactionGREEN: rgb(96, 233, 255);
+	--calltoactionBLUE: #fd44e8;
+
+	/* gradient */
+	/* Bron: https://www.joshwcomeau.com/gradient-generator/ */
+	--sectionslides: linear-gradient(
+		0deg,
+		hsl(224deg 100% 38%) 0%,
+		hsl(226deg 79% 47%) 8%,
+		hsl(225deg 82% 54%) 16%,
+		hsl(224deg 100% 61%) 24%,
+		hsl(209deg 100% 50%) 31%,
+		hsl(204deg 100% 50%) 39%,
+		hsl(204deg 89% 59%) 47%,
+		hsl(198deg 94% 54%) 55%,
+		hsl(193deg 100% 49%) 64%,
+		hsl(190deg 99% 49%) 73%,
+		hsl(189deg 100% 49%) 81%,
+		hsl(187deg 96% 51%) 91%,
+		hsl(186deg 95% 55%) 100%
+	  );
+
+	/* fonts */
+	--websitefont: 'Kanit', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+/* Bronnen */
+/* https://techstacker.com/how-to-make-elements-zoom-on-hover-with-css/ */
+/* https://css-tricks.com/almanac/properties/c/clip-path/ */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit?retiredLocale=nl */
+
+/* Speciale states */
+img:focus-visible {
+	border: solid 1px var(--calltoactionPINK);
+	box-shadow: 0px 0px 10px 10px var(--calltoactionCYAN);
+	transform: scale(1.01);
 }
+
+button:focus-visible {
+	border: solid 1px var(--calltoactionPINK);
+	box-shadow: 0px 0px 10px 10px var(--calltoactionCYAN);
+	transform: scale(1.01);
+}
+
+a:focus-visible {
+	border: solid 1px var(--calltoactionPINK);
+	box-shadow: 0px 0px 10px 10px var(--calltoactionCYAN);
+	transform: scale(1.01);
+}
+
+button:active {
+	transform: scale(1.2);
+}
+
+a:active {
+	transform: scale(1.2);
+}
+
+main  {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+/* gemakkelijk de font per element kunnen aanpassen */
+
+  p {
+	font-family: var(--websitefont);
+}
+
+  h1 {
+	font-family: var(--websitefont);
+  }
+
+  h2 {
+	font-family: var(--websitefont);
+  }
+
+  h3 {
+	font-family: var(--websitefont);
+  }
+
+  button {
+	font-family: var(--websitefont);
+  }
+
+  ul {
+	padding-left: none;
+	list-style: none;
+  }
+
+  img {
+	width: 100%;
+  }
+
+/* Section 1 */
+	
+  body.index section.promovideo video {
+	width: 100%;
+	height: 100px;
+	/* bron: https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit?retiredLocale=nl */
+	object-fit: cover;
+	position: absolute;
+	left: 0;
+  }
+
+  main.index section[aria-label="landing-page"] section {
+	position: relative;
+	height: 500px;
+  }
+
+  main.index section[aria-label="landing-page"] section img{
+	width: 80%;
+	margin-top: 1em;
+  }
+
+  main.index section[aria-label="landing-page"] span{
+	justify-items: center;
+  }
+
+  main.index section[aria-label="landing-page"] h1 {
+	color: var(--zwartmain);
+	transform: skewY(-5deg);
+	font-size:1em;
+	line-height:1em;
+	letter-spacing:.3em;
+	background-color: white;
+	border-radius: 3em;
+	padding: 5px;
+	margin-left: 6.5em;
+	margin-right: 6.5em;
+	transition: 1s;
+  }
+
+  main.index section[aria-label="landing-page"] h1:hover {
+	color: var(--calltoactionPINK);
+	transform: skewY(0deg);
+	font-size:1em;
+	line-height:1em;
+	letter-spacing:.3em;
+	background-color: white;
+	border-top: var(--calltoactionCYAN);
+	border-bottom: var(--calltoactionCYAN);
+	border-right: var(--calltoactionPINK);
+	border-left: var(--calltoactionPINK);
+	border-width: 0.3em;
+	border-style: dotted;
+	border-radius: 3em;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-left: 5.5em;
+	margin-right: 5.5em;
+  }
+
+  main.index section[aria-label="landing-page"] h2 {
+	color: var(--calltoactionPINK);
+	font-size: 3em;
+	line-height:1em;
+	letter-spacing:.1em;
+	text-shadow:.1em .1em 0 var(--witmain);
+	margin-bottom: 1em;
+	transition: 1s;
+  }
+
+  main.index section[aria-label="landing-page"] h2:hover {
+	color: var(--calltoactionCYAN);
+	text-shadow:.1em .1em 0 var(--zwartmain);
+  }
+
+  main.index section[aria-label="landing-page"] button {
+	color: var(--witmain);
+	background-color: var(--calltoactionPINK);
+	padding: 10px 30px 10px 30px;
+	transform: skewY(-5deg);
+	font-size: 1em;
+	line-height:1em;
+	letter-spacing:.1em;
+	text-shadow:.1em .1em 0 var(--zwartmain);
+	width: 100%;
+	transition: 2s;
+  }
+
+  main.index section[aria-label="landing-page"] button:hover {
+	color: var(--zwartmain);
+	background-color: var(--calltoactionCYAN);
+	padding: 10px 30px 10px 30px;
+	transform: skewY(-5deg);
+	font-size: 1em;
+	line-height:1em;
+	letter-spacing:.1em;
+	text-shadow:.1em .1em 0 var(--zwartmain);
+	width: 100%
+  }
+  
+
+ 
