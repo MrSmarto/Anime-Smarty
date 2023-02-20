@@ -81,6 +81,10 @@ main  {
 	text-align: center;
 }
 
+body {
+    background-color: var(--zwartmain);
+}
+
 /* gemakkelijk de font per element kunnen aanpassen */
 
   p {
@@ -93,6 +97,7 @@ main  {
 
   h2 {
 	font-family: var(--websitefont);
+    color: red;
   }
 
   h3 {
