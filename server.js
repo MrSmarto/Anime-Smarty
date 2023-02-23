@@ -5,7 +5,7 @@ app.use((req, res, next) => {
   res.status(404).send('<h1>DEZE PAGINA BESTAAT NIET</h1>');
 });
 
-app.get('/index.html', onhome)
+app.get('/', onhome)
   .listen(1900)
 
 app.use('/public',express.static('public'));
