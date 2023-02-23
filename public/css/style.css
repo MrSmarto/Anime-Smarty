@@ -48,12 +48,6 @@
 /* https://css-tricks.com/almanac/properties/c/clip-path/ */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit?retiredLocale=nl */
 
-main  {
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-}
-
 body {
     background-color: var(--zwartmain);
 }
@@ -90,6 +84,10 @@ body {
 	width: 100%;
   }
 
+  body.index nav img {
+	width: 25%;
+  }
+
 /* Section 1 */
 	
   body.index section.promovideo video {
@@ -100,5 +98,14 @@ body {
 	position: absolute;
 	left: 0;
   }
+
+  body.index main section:nth-of-type(1) {
+	position: relative;
+  }
+  
+  body.index main section:nth-of-type(1) p span{
+	color: var(--calltoactionGREEN);
+  }
+  	
 
   
