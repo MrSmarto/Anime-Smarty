@@ -4,8 +4,8 @@
   "description": "Dit is voor mijn project-tech voor het leerjaar 2 van CMD.",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "build": "nodemon server.js"
+    "start": "nodemon server.js",
+    "build": " server.js"
   },
   "author": "Thijmen Smart",
   "license": "MIT",
