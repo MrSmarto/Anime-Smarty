@@ -1,6 +1,3 @@
-/**************/
-/* CSS REMEDY */
-/**************/
 *, *::after, *::before {
 	box-sizing:border-box;  
   }
@@ -41,17 +38,13 @@
 	  );
 
 	/* fonts */
-	--websitefont: 'Kanit', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-	/* winkel */
-	--item-color: var(--zwartmain);
-	--item-border-color: var(--zwartmain);
-	--item-text-shadow:
-		0 0 .125em var(--calltoactionCYAN),
-		0 0 .25em var(--calltoactionCYAN),
-		0 0 .5em var(--calltoactionCYAN);
+	--websitefont: 'Poppins', sans-serif;
   }
 
   body {
     background: var(--zwartmain);
+  }
+
+  h2 {
+	color: red;
   }
