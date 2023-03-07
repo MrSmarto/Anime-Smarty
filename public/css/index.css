@@ -1,0 +1,276 @@
+*, *::after, *::before {
+	box-sizing:border-box;  
+	margin: 0;
+	padding: 0;
+  }
+  
+  button:not(disabled) {
+	cursor:pointer;
+  }
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+/* https://dlo.mijnhva.nl/d2l/le/content/437099/Home */
+:root {
+	--zwartmain:#000000;
+    --primairmain:#7ED957;
+    --secondairmain:#5CE1E6;
+    --textkleur1:#707070;
+    --textkleur1:#53616A;
+
+	/* Shadow */
+	/* Bron: https://www.joshwcomeau.com/gradient-generator/ */
+	--shadowvoorblok:
+      0 0 .125em var(--zwartmain),
+      0 0 .25em var(--primairmain),
+      0 0 .5em var(--zwartmain);
+
+	  /* fonts */
+	--websitefont: 'Poppins', sans-serif;
+
+}
+
+/* ALGEMEEN */
+
+  body {
+    background: black;
+	font-family: var(--websitefont);;
+  }
+
+  h1, h2, h3, p {
+	text-decoration: none;
+  }
+
+  p {
+	color: white;
+  }
+
+  h2 {
+	color: white;
+  }
+
+  a {
+	text-decoration: none;
+  }
+
+
+/* NAV */
+
+header {
+	display: flex;
+	align-content: center;
+	background-color: #000000;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+}
+
+  header nav img:nth-of-type(1) {
+	width: 60%;
+	margin-left: 0.5em;
+	margin-right: 1.2em;
+  }
+
+  header nav img:nth-of-type(2) {
+	width: 15%;
+  }
+
+  header nav img:nth-of-type(3) {
+	width: 15%;
+  }
+
+/* BUTTONS */
+
+  main section section section {
+	display: flex;
+  }
+  
+button {
+	background-color: white;
+	border: none;
+	padding: 10px 20px;
+	color: var(--primairmain);
+	text-decoration: none;
+	font-size: 16px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	box-shadow: var(--shadowvoorblok);	
+  }
+
+  main section section section button.btn2 {
+	background-color: #53616A;
+  }
+  
+  button img {
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+  }
+  
+
+/* SECTION "VIDEO SECTION" */
+
+  main video {
+	width: 100%;
+  }
+
+  main section:nth-of-type(1) video {
+	height: 300px;
+	width: 100%;
+	object-fit: fill;
+	position: absolute;
+	top: 5em;
+	z-index: -1;
+  }
+  main section:nth-of-type(1) section h2{
+	top: 0.3em;
+    margin-top: 3em;
+    color: var(--primairmain);
+	font-weight: 1500;
+    text-align: center;
+	position: relative;
+	background: black;
+	margin-left: 5em;
+	margin-right: 5em;
+	border-radius: 0 0 5px 5px;
+  }
+
+  main section:nth-of-type(1) section section {
+	position: relative;
+	margin: 13em 1em 0 1em;
+	display: flex;
+	justify-content: space-between;
+  }
+ 
+ /* SECTION "NIEUWE FILMS" */
+
+  main section:nth-of-type(2) {
+	margin-left: 1em;
+	margin-top: 4em;
+	margin-right: 1em;
+  }
+
+  main section:nth-of-type(2) h2 {
+	margin-bottom: 0.5em;
+  }
+
+  main section:nth-of-type(2) ul {
+	padding-left: none;
+	list-style: none;
+	display: flex;
+	padding-left: 0;
+	margin-bottom: 3em;
+	gap: 1em;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	margin-left: 0.5em;
+  }
+
+  main section:nth-of-type(2) ul li a img  {
+	width: 10em;
+	height: 80%;
+  }
+
+  main section:nth-of-type(2) ul li a {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	flex-direction: column;
+	padding: 0;
+	margin: 0;
+  }
+
+  main section:nth-of-type(2) ul li a h3 {
+	height: 20%;
+	color:white;
+	background-color: #53616A;
+	margin: 0;
+	padding: 0.25em 0 0 0.25em;
+  }
+
+/* SECTION "JOUW KIJKLIJST" */
+
+  main section:nth-of-type(3) {
+	margin-left: 1em;
+  }
+
+  main section:nth-of-type(3) h2 {
+	margin-bottom: 0.5em;
+  }
+
+  main section:nth-of-type(3) ul {
+	padding-left: none;
+	list-style: none;
+	display: flex;
+	padding-left: 0;
+	margin-bottom: 3em;
+	gap: 1em;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	margin-left: 0.5em;
+  }
+  
+  main section:nth-of-type(3) ul li{
+	display: flex;
+	flex-direction: column;
+  }
+
+  main section:nth-of-type(3) ul li img  {
+	width: 10em;
+	height: 80%;
+  }
+
+  main section:nth-of-type(3) ul li h3 {
+	height: 20%;
+	color:white;
+	background-color: #53616A;
+	margin: 0;
+	padding: 0.25em 0 0 0.25em;
+  }
+
+  /* FOOTER */
+
+footer {
+	margin-top: 1em;
+	background-color: #707070;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	width: 100%;
+}
+footer nav ul {
+	display: flex;
+    width: 100%;
+    list-style-type: none;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+footer nav ul li {
+	align-content: center;
+	text-align: center;
+}
+
+footer nav ul li p {
+	margin: 0;
+	padding: 0;
+}
+
+footer nav ul li:nth-of-type(1) span {
+	color: var(--primairmain);
+}
+
+footer nav ul li:nth-of-type(2) span {
+	color: white;
+}
+
+footer nav ul li img:nth-of-type(1) {
+	width: 20%
+  }
+
+footer nav ul li img:nth-of-type(2) {
+	width: 15%;
+  }
+
