@@ -104,34 +104,55 @@ h1 {
 
   /* RATING FUNCTIE */
 
-  .rating{
+  /* Layout */
+#rating-wrapper {
     display: flex;
-    color: #9e9e9e;
-    font-size: 2em;
-    margin-top: 0.5em;
-  }
-  [type=radio]{
-    display: none;
-  }
-  form label{
-    margin:0 5px;
-  }
-  form label:hover{
-    color: var(--primairmain);
-  }
-
-  [type="submit"]{
-    border: 2px solid black;
-    background-color: white;
-    color: black;
-    padding: 5px ;
-    margin-left: 15px;
-  }
-
-  [type="submit"]:hover{
-      background-color: black;
+    flex-direction: row-reverse;
+    width: fit-content;
     color: white;
-    border: 2px solid gray;
+  }
+  
+  input[type="radio"] {
+    position: absolute;
+    top: -9999px;
+  }
+  
+  #rating-wrapper > .rating-star:not(:last-of-type) {
+    margin-right: 3px;
+    
+  }
+  
+  #reset-rating {
+    margin-top: 8px;
+    cursor: pointer;
+  }
+  
+  /* hover */
+  #rating-wrapper > .fa.fa-star.rating-star:hover {
+    cursor: pointer;
+    color: orange;
+    opacity: 0.6;
+  }
+  
+  #rating-wrapper > .fa.fa-star.rating-star:hover ~ .rating-star {
+    color: orange;
+    opacity: 0.6;
+  }
+  
+  /* after click (check) */
+  #rating-wrapper > input[type="radio"]:checked + label {
+    color: orange;
+  }
+  
+  #rating-wrapper > input[type="radio"]:checked + label ~ .rating-star {
+    color: orange;
+  }  
+
+  #reset-rating {
+    position: absolute;
+    top: 31.5em;
+    width: 6.7em;
+    z-index: 1;
   }
   
   
@@ -151,6 +172,6 @@ h1 {
   }
 
   main section:nth-of-type(2) h2 {
-    margin-top: 1em;
+    margin-top: 2.5em;
   }
 

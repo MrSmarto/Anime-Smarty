@@ -1,3 +1,5 @@
+// variablen
+
 const express = require('express')
 const app = express();
 const port = 1900;
@@ -9,17 +11,13 @@ const films = [
 
 //midlewear
 
+app.use("/public", express.static('public'));
+app.set('view engine', 'ejs');
 
 //connection naar MongoDB
 
 
 //Routes
-
-
-//server configurations
-
-app.use("/public", express.static('public'));
-app.set('view engine', 'ejs');
 
 app.get('/',(req, res) => {
   res.render("index.ejs", { films });
@@ -36,6 +34,8 @@ app.use(function(req, res) {
 app.get("/liked", (req, res) => {
   res.render("liked");
 });
+
+//server configurations
 
 app.listen(port, () => console.log("Server is gestart op port: 1900"));
 
