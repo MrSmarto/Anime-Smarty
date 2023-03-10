@@ -1,123 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('header.ejs') %>
+<main>
+    <section class="promovideo">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ANIME SMARTY</title>
-    <link rel="stylesheet" type="text/css" href="./public/css/index.css">
-</head>
-
-<body class="index">
-    <header>
-        <nav>
-            <img src="../public/upload/images/LOGOJUIST.png" alt="Logo">
-            <img src="../public/upload/images/chromeshare.png" alt="Logo">
-            <img src="../public/upload/images/zoekenwit.png" alt="Logo">
-        </nav>
-    </header>
-    <main>
-        <section class="promovideo">
-
-            <video src="../public/upload/video's/ROAD OF NARUTO NARUTO 20th Anniversary Trailer VIZ.mp4"
-                alt="Achtergrond video van naruto homepagina" autoplay loop muted>
-            </video>
+        <video src="../public/upload/video's/ROAD OF NARUTO NARUTO 20th Anniversary Trailer VIZ.mp4"
+            alt="Achtergrond video van naruto homepagina" autoplay loop muted>
+        </video>
+        <section>
+            <h2>Naruto</h2>
             <section>
-                <h2>Naruto</h2>
-                <section>
-                    <a href="./detailspagina">
-                        <button class="btn1">
-                            <img src="../public/upload/images/playgroen.png" alt="Afspelen" />
-                            Afspelen
-                        </button>
-                    </a>
-                    <a href="./detailspagina">
-                        <button class="btn2">
-                            <img src="../public/upload/images/pluswit.png" alt="Afspelen" />
-                            Afspelen
-                        </button>
-                    </a>
-                </section>
+                <a href="./detailspagina">
+                    <button class="btn1">
+                        <img src="../public/upload/images/playgroen.png" alt="Afspelen" />
+                        Afspelen
+                    </button>
+                </a>
+                <a href="./detailspagina">
+                    <button class="btn2">
+                        <img src="../public/upload/images/pluswit.png" alt="Afspelen" />
+                        Afspelen
+                    </button>
+                </a>
             </section>
         </section>
-        <section>
-            <h2>Nieuwste films</h2>
-            <ul class="slide-films">
-                <li>
-                    <a href="./detailspagina">
-                        <img src="../public/upload/images/movies/onepiece.jpg"
-                            alt="informatie over de challenges van season 3">
-                        <h3>One piece</h3>
-                    </a>
-                </li>
-                <li>
-                    <a href="./detailspagina.ejs">
-                        <img src="../public/upload/images/movies/dragonball.jpg"
-                            alt="informatie over de obstackles van season 3">
-                        <h3>Dragonball</h3>
-                    </a>
-                </li>
-                <li>
-                    <a href="./detailspagina.ejs">
-                        <img src="../public/upload/images/movies/AOT.jpg" alt="informatie over de rondes van season 3">
-                        <h3>Attack on Titan</h3>
-                    </a>
-                </li>
-                <li>
-                    <a href="./detailspagina.ejs">
-                        <img src="../public/upload/images/movies/OPman.jpg"
-                            alt="informatie over de rondes van season 3">
-                        <h3>One Punch Man</h3>
-                    </a>
-                </li>
-            </ul>
-        </section>
-        <section>
-            <h2>Jouw kijklijst</h2>
-            <ul class="slide-films">
-                <li>
-                    <img src="../public/upload/images/movies/leeg.png" alt="informatie over de challenges van season 3">
-                    <h3>Leeg</h3>
-                </li>
-                <li>
-                    <img src="../public/upload/images/movies/leeg.png" alt="informatie over de obstackles van season 3">
-                    <h3>leeg</h3>
-                </li>
-                <li>
-                    <img src="../public/upload/images/movies/leeg.png" alt="informatie over de rondes van season 3">
-                    <h3>Leeg</h3>
-                </li>
-                <li>
-                    <img src="../public/upload/images/movies/leeg.png" alt="informatie over de rondes van season 3">
-                    <h3>Leeg</h3>
-                </li>
-            </ul>
-        </section>
-
-        <h2>films</h2>
-        <ul>
-            <% for (let movies of films) { %>
+    </section>
+    <section>
+        <h2>Nieuwste films</h2>
+        <ul class="slide-films">
             <li>
-                <p>Deze film: <%= movies.name %> heeft dit genre: <%= movies.genre %> .</p>
+                <a href="./detailspagina">
+                    <img src="../public/upload/images/movies/onepiece.jpg"
+                        alt="informatie over de challenges van season 3">
+                    <h3>One piece</h3>
+                </a>
             </li>
-            <% } %>
+            <li>
+                <a href="./detailspagina">
+                    <img src="../public/upload/images/movies/dragonball.jpg"
+                        alt="informatie over de obstackles van season 3">
+                    <h3>Dragonball</h3>
+                </a>
+            </li>
+            <li>
+                <a href="./detailspagina">
+                    <img src="../public/upload/images/movies/AOT.jpg" alt="informatie over de rondes van season 3">
+                    <h3>Attack on Titan</h3>
+                </a>
+            </li>
+            <li>
+                <a href="./detailspagina">
+                    <img src="../public/upload/images/movies/OPman.jpg" alt="informatie over de rondes van season 3">
+                    <h3>One Punch Man</h3>
+                </a>
+            </li>
         </ul>
-    </main>
-    <footer>
-        <nav>
-            <ul>
+    </section>
+   
+    <section>
+        <h1></h1>
+        <h2></h2>
+        <h3></h3>
+    </section>
+</main>
+<footer>
+    <nav>
+        <ul>
+            <a href="/">
                 <li>
                     <img src="../public/upload/images/homegroen.png" alt="Logo">
                     <p><span>Home</span></p>
                 </li>
+            </a>
+            <a href="/account">
                 <li>
                     <img src="../public/upload/images/accountwit.png" alt="Logo">
                     <p><span>Account</span></p>
                 </li>
-            </ul>
-        </nav>
-    </footer>
+            </a>
+        </ul>
+    </nav>
+</footer>
+<script defer src="../public/script.js"></script>
 </body>
-
 </html>

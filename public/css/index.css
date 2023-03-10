@@ -55,6 +55,10 @@
 	text-decoration: none;
   }
 
+  main {
+	margin-bottom: 7em;
+  }
+
 
 /* NAV */
 
@@ -191,6 +195,32 @@ button {
 	padding: 0.25em 0 0 0.25em;
   }
 
+/* API TUSSENSTUKJE */
+
+  main section:nth-of-type(4) {
+	text-align: center;
+	margin-left: 2em;
+	margin-right: 2em;
+	margin-bottom: 10em;
+  }
+
+  main section:nth-of-type(4) h1 {
+	color: var(--primairmain);
+	font: 0.1em;
+	margin-top: 0.5em;
+  }
+
+  main section:nth-of-type(4) h2 {
+	color: var(--secondairmain);
+	font: 0.5em;
+	margin-top: 0.5em;
+  }
+
+  main section:nth-of-type(4) h3 {
+	color: wheat;
+	font: 0.5em;
+  }
+
 /* SECTION "JOUW KIJKLIJST" */
 
   main section:nth-of-type(3) {
@@ -234,11 +264,14 @@ button {
   /* FOOTER */
 
 footer {
-	margin-top: 1em;
+	
 	background-color: #707070;
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
 	width: 100%;
+	position: fixed;
+	z-index: 100;
+	bottom: 0;
 }
 footer nav ul {
 	display: flex;
@@ -258,11 +291,11 @@ footer nav ul li p {
 	padding: 0;
 }
 
-footer nav ul li:nth-of-type(1) span {
+footer nav ul a:nth-of-type(1) li span {
 	color: var(--primairmain);
 }
 
-footer nav ul li:nth-of-type(2) span {
+footer nav ul a:nth-of-type(2) li span {
 	color: white;
 }
 
