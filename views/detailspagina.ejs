@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detailpagina</title>
-    <link rel="stylesheet" type="text/css" href="./public/css/detailspagina.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/detailspagina.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -21,15 +21,15 @@
         </nav>
     </header>
     <main>
-        <h1><%= film.title %></h1>
-        <p>Afleveringen: <%= film.episodes %></p>
-        <p>Releasedatum: <%= film.release %></p>
-        <p>Beschrijving: <%= film.description %></p>
+        <h1><strong><%= film.title %></strong></h1>
+        <p><strong>Afleveringen:</strong> <br> <%= film.episodes %></p>
+        <p><strong>Releasedatum:</strong> <br> <%= film.release %></p>
+        <p><strong>Beschrijving:</strong> <br> <%= film.descriptions %></p>
         <img src="../public/upload/images/movies/<%= film.photo %>" alt="<%= film.title %>">
     </main>
 
     <footer>
-
+        
     </footer>
 </body>
 

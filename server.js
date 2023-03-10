@@ -35,20 +35,24 @@ app.get('/', async (req, res) => {
 
 //detailpagina 
 
-app.get('/detailspagina', async (req, res) => {
+app.get('/detailspagina/:id', async (req, res) => {
   try {
-    // haal de index van de film uit de URL parameters
-    const filmIndex = req.query.id;
-    console.log(filmIndex);
+    // haal het ID uit de URL parameters
+    const filmID = parseInt(req.params.id);
 
-    // gebruik de index om de bijbehorende filmgegevens op te halen uit de database
-    const data = await db.collection('Datafilms').findOne({ id: filmIndex });
-    console.log(data);
+    // controleer of de filmID een getal is
+    if (isNaN(filmID)) {
+      res.status(400).send('Invalid ID');
+      return;
+    }
 
-    // controleer of er resultaten zijn gevonden voor de opgegeven index
+    // gebruik het ID om de bijbehorende filmgegevens op te halen uit de database
+    const data = await db.collection('Datafilms').findOne({ id: filmID });
+
+    // controleer of er resultaten zijn gevonden voor het opgegeven filmID
     if (!data) {
       // toon een foutmelding als er geen resultaten zijn gevonden
-      res.status(404).send('Anime not found');
+      res.status(404).send('Film not found');
       return;
     }
 
@@ -60,24 +64,6 @@ app.get('/detailspagina', async (req, res) => {
   }
 });
 
-
-
-
-// app.get('/detailspagina', async (req, res) => {
-//   try {
-//     // haal de ID uit de URL parameters
-//     const animeId = req.query.id;
-//     console.log(animeId);
-//     // gebruik de ID om de bijbehorende filmgegevens op te halen uit de database
-//     const data = await db.collection('Datafilms').find({ id: animeId });
-//     console.log(data);
-//     // stuur de filmgegevens mee naar de detailspagina
-//     res.render("detailspagina.ejs", { film: data, id : data });
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).send('Er is een fout opgetreden bij het ophalen van de gegevens');
-//   }
-// });
 
 
 
