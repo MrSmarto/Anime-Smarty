@@ -1,5 +1,27 @@
 <%- include('head.ejs') %>
 
+<header>
+    <h1>Mijn Account</h1>
+</header>
+<main>
+    <% if (savedFilms.length > 0) { %>
+        <ul>
+            <% savedFilms.forEach(function(film) { %>
+                <li>
+                    <img src="/images/<%= film.image %>" alt="<%= film.title %>">
+                    <h2><%= film.title %></h2>
+                    <p><%= film.release %></p>
+                    <p><%= film.description %></p>
+                    <p>Aantal afleveringen: <%= film.episodes %></p>
+                    <button class="verwijder-knop" data-film-id="<%= film._id %>">Verwijderen</button>
+                </li>
+            <% }); %>
+        </ul>
+    <% } else { %>
+        <p>Je hebt nog geen films opgeslagen.</p>
+    <% } %>
+</main>
+
 <footer>
     <nav>
         <ul>

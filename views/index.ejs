@@ -25,34 +25,16 @@
     </section>
     <section>
         <h2>Nieuwste films</h2>
-        <ul class="slide-films">
-            <li>
-                <a href="./detailspagina">
-                    <img src="../public/upload/images/movies/onepiece.jpg"
-                        alt="informatie over de challenges van season 3">
-                    <h3>One piece</h3>
-                </a>
+        <ul>
+            <% films.forEach(function(film) { %>
+              <li>
+                <a href="/detailspagina/<%= film.id %>">
+                <h3><%= film.title %></h3>
+                <img src="../public/upload/images/movies/<%= film.photo %>" alt="<%= film.title %>">
+            </a> 
             </li>
-            <li>
-                <a href="./detailspagina">
-                    <img src="../public/upload/images/movies/dragonball.jpg"
-                        alt="informatie over de obstackles van season 3">
-                    <h3>Dragonball</h3>
-                </a>
-            </li>
-            <li>
-                <a href="./detailspagina">
-                    <img src="../public/upload/images/movies/AOT.jpg" alt="informatie over de rondes van season 3">
-                    <h3>Attack on Titan</h3>
-                </a>
-            </li>
-            <li>
-                <a href="./detailspagina">
-                    <img src="../public/upload/images/movies/OPman.jpg" alt="informatie over de rondes van season 3">
-                    <h3>One Punch Man</h3>
-                </a>
-            </li>
-        </ul>
+            <% }); %>
+          </ul>
     </section>
    
     <section>

@@ -11,18 +11,23 @@
 </head>
 
 <body>
+    <header>
+        <nav>
+            <a href="/">
+                <img src="../public/upload/images/kruiswit.png" alt="Logo">
+            </a>
+            <img src="../public/upload/images/chromeshare.png" alt="Logo">
+            <img src="../public/upload/images/zoekenwit.png" alt="Logo">
+        </nav>
+    </header>
     <main>
-        <header>
-            <nav>
-                <a href="/">
-                    <img src="../public/upload/images/kruiswit.png" alt="Logo">
-                </a>
-                <img src="../public/upload/images/chromeshare.png" alt="Logo">
-                <img src="../public/upload/images/zoekenwit.png" alt="Logo">
-            </nav>
-        </header>
-        
+        <h1><%= film.title %></h1>
+        <p>Afleveringen: <%= film.episodes %></p>
+        <p>Releasedatum: <%= film.release %></p>
+        <p>Beschrijving: <%= film.description %></p>
+        <img src="../public/upload/images/movies/<%= film.photo %>" alt="<%= film.title %>">
     </main>
+
     <footer>
 
     </footer>
