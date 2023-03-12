@@ -6,7 +6,7 @@ Welcome, this is my assigmenent for my school project called: `project tech`. Fo
 
 ## ![concept](https://user-images.githubusercontent.com/118122875/224569879-7b376629-fc7b-401a-81b5-9f5e5917521d.png) Het concept
 
-Welkom! Dit is mijn respository voor mijn linking feature voor project-tech. Anime Smarty is een website waarop je jouw favoriete anime gemakkelijk kan vinden, bekijken of eventueel opslaat(Liken) voor later.
+Anime Smarty is an application where you'll be able to choose your preferenced anime. You'll will be able to read information about this specific anime and `save` it to your own account. Are you done with it? No problem, you'll will be able to easily `delete` your anime's from your account page.
 
 ## ![install](https://user-images.githubusercontent.com/118122875/224570019-3d6ab194-d3ef-458e-b9b6-d66a5cf39809.png) How to install
 
