@@ -6,12 +6,16 @@ const app = express();
 const port = 1900;
 const { MongoClient } = require("mongodb");
 const dotenv = require('dotenv');
+const bodyParser = require('body-parser');
+
 
 //midlewear
 
 app.use("/public", express.static('public'));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 dotenv.config(); // Laad de data van de .env bestand
+
 
 //Routes 
 
@@ -64,16 +68,82 @@ app.get('/detailspagina/:id', async (req, res) => {
   }
 });
 
+// Pagina voor account
 
+// Haal de opgeslagen films op uit de database en render de accountpagina met de opgeslagen films.
+app.get('/account', async (req, res) => {
+  try {
+    // Haal alle opgeslagen films op uit de "savedFilms" collectie
+    const savedFilms = await db.collection('savedFilms').find().toArray();
 
-
-//acountpagina 
-
-app.get('/account', (req, res) => {
-  res.locals.title = "Account"
-  res.locals.css = "./public/css/account.css"
-  res.render("account.ejs");
+    // Geef de opgeslagen films door aan de account pagina om weer te geven
+    res.render('account.ejs', {
+      title: 'ANIME SMARTO - Account',
+      css: './public/css/account.css',
+      savedFilms: savedFilms
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Er is een fout opgetreden bij het ophalen van de gegevens');
+  }
 });
+
+// De routes voor de opgeslagen films
+
+// Deze route voegt een film toe aan de opgeslagen films in de database.
+app.post('/savedFilms', async (req, res) => {
+  try {
+    // haal het filmID op uit het POST verzoek
+    const filmID = parseInt(req.body.filmId);
+
+    // controleer of de filmID een getal is
+    if (isNaN(filmID)) {
+      res.status(400).send('Invalid ID');
+      return;
+    }
+
+    // controleer of de film al is opgeslagen
+    const savedFilm = await db.collection('savedFilms').findOne({ id: filmID });
+    if (savedFilm) {
+      // de film is al opgeslagen, stuur de gebruiker direct door naar de accountpagina
+      res.redirect('/account');
+      return;
+    }
+
+    // de film is nog niet opgeslagen, sla deze op
+    const film = await db.collection('Datafilms').findOne({ id: filmID });
+    await db.collection('savedFilms').insertOne(film);
+
+    // stuur de gebruiker door naar de accountpagina
+    res.redirect('/account');
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Er is een fout opgetreden bij het opslaan van de film');
+  }
+});
+
+// De routes om de opgeslagen films te verwijderen
+
+app.post('/deleteSavedFilm', async (req, res) => {
+  try {
+    // Haal het ID van de te verwijderen film op uit de POST request
+    const filmId = parseInt(req.body.filmId);
+
+    // Verwijder de film met het opgegeven ID uit de "savedFilms" collectie
+    const result = await db.collection('savedFilms').deleteOne({ id: filmId });
+    if (result.deletedCount === 0) {
+      res.status(404).send('Film niet gevonden');
+      return;
+    }
+
+    // Redirect terug naar de accountpagina
+    res.redirect('/account');
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Er is een fout opgetreden bij het verwijderen van de film');
+  }
+});
+
 
 //Error  
 
@@ -85,8 +155,6 @@ app.use(function (req, res) {
   });
 });
 
-//connection naar MongoDB
-let db = null;
 
 // Verbinding maken met de MongoDB-database
 async function connectDB() {
@@ -106,6 +174,7 @@ async function connectDB() {
     throw error;
   }
 }
+
 
 //server configurations
 app.listen(port, async () => {

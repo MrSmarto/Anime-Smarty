@@ -1,12 +1,19 @@
-// HEADER objects
 
-const films = [ 
-    { name: 'naruto', genre: 'rustig' },
-    { name: 'one piece', genre: 'romantiek' }, 
-    { name: 'dragonball', genre: 'sad' }
-  ];
 
-// FOOTER objects
+// BUTTON OP DE DETAILSPAGINA.EJS
+
+// selecteer de knop
+const button = document.querySelector('button');
+
+// voeg een event listener toe voor het "click" event
+button.addEventListener('click', function() {
+  // verander de achtergrondkleur van de body naar rood
+  document.body.style.backgroundColor = 'red';
+
+  // verander de tekst van de knop naar "Geklikt!"
+  button.textContent = 'Geklikt!';
+});
+
 
 // API
 

@@ -86,9 +86,6 @@ h1 {
     border-radius: 5em;
   }
 
-  
-  
-
   /* HEADER */
 
   header nav {
@@ -116,6 +113,38 @@ h1 {
   header nav img:nth-of-type(2) {
 	width: 15%;
   }
+
+  /* positie en stijl van de knop */
+.buttonopslaan {
+  position: fixed;
+  bottom: 0;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 7.9em;
+  background-color: var(--primairmain);
+  font-size: 1em;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  z-index: 999;
+}
+
+/* stijl van het icoontje */
+.buttonopslaan img {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 0.5rem;
+}
+
+/* stijl van de knop als erop wordt gehoverd */
+.buttonopslaan:hover {
+  background-color: var(--secondairmain);
+}
+
 
 
 

@@ -29,8 +29,14 @@
     </main>
 
     <footer>
-        
+        <form method="POST" action="/savedFilms">
+            <input type="hidden" name="filmId" value="<%= film.id %>">
+            <button class="buttonopslaan" type="submit">Opslaan</button>
+        </form>
     </footer>
+
+
+
 </body>
 
 </html>
