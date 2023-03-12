@@ -199,41 +199,45 @@ button {
 
 /* API TUSSENSTUKJE */
 
-  main section:nth-of-type(4) {
+  main section:nth-of-type(3) {
 	text-align: center;
-	margin-left: 2em;
+	margin-left: 1.5em;
 	margin-right: 2em;
-	margin-bottom: 10em;
+	margin-bottom: 1em;
   }
 
-  main section:nth-of-type(4) h1 {
+  main section:nth-of-type(3) {
+	font-weight: bolder;
+  }
+
+  main section:nth-of-type(3) h1 {
 	color: var(--primairmain);
 	font: 0.1em;
-	margin-top: 0.5em;
+	margin-bottom: 0.5em;
   }
 
-  main section:nth-of-type(4) h2 {
+  main section:nth-of-type(3) h2 {
 	color: var(--secondairmain);
 	font: 0.5em;
-	margin-top: 0.5em;
+	margin-bottom: 0.5em;
   }
 
-  main section:nth-of-type(4) h3 {
+  main section:nth-of-type(3) h3 {
 	color: wheat;
 	font: 0.5em;
   }
 
 /* SECTION "JOUW KIJKLIJST" */
 
-  main section:nth-of-type(3) {
+  main section:nth-of-type(2) {
 	margin-left: 1em;
   }
 
-  main section:nth-of-type(3) h2 {
+  main section:nth-of-type(2) h2 {
 	margin-bottom: 0.5em;
   }
 
-  main section:nth-of-type(3) ul {
+  main section:nth-of-type(2) ul {
 	padding-left: none;
 	list-style: none;
 	display: flex;
@@ -245,17 +249,17 @@ button {
 	margin-left: 0.5em;
   }
   
-  main section:nth-of-type(3) ul li{
+  main section:nth-of-type(2) ul li{
 	display: flex;
 	flex-direction: column;
   }
 
-  main section:nth-of-type(3) ul li img  {
+  main section:nth-of-type(2) ul li img  {
 	width: 10em;
 	height: 80%;
   }
 
-  main section:nth-of-type(3) ul li h3 {
+  main section:nth-of-type(2) ul li h3 {
 	height: 20%;
 	color:white;
 	background-color: #53616A;
