@@ -2,9 +2,11 @@
 
 ##  ![logogit 20 51 12](https://user-images.githubusercontent.com/118122875/224569751-c121abc7-ccbe-43a8-a770-22a9b796d818.png) Anime Smarty
 
-Welkom! Dit is mijn respository voor mijn linking feature voor project-tech. Anime Smarty is een website waarop je jouw favoriete anime gemakkelijk kan vinden, bekijken of eventueel opslaat(Liken) voor later.
+Welcome, this is my assigmenent for my school project called: `project tech`. For this project i'm going to make a application where you can `save (LIKING)` your favorite anime series to your profile. Take a look at my [WIKI](https://github.com/MrSmarto/BLOKTECH23) for more information! (written in `Dutch`.
 
 ## ![concept](https://user-images.githubusercontent.com/118122875/224569879-7b376629-fc7b-401a-81b5-9f5e5917521d.png) Het concept
+
+Welkom! Dit is mijn respository voor mijn linking feature voor project-tech. Anime Smarty is een website waarop je jouw favoriete anime gemakkelijk kan vinden, bekijken of eventueel opslaat(Liken) voor later.
 
 ## ![install](https://user-images.githubusercontent.com/118122875/224570019-3d6ab194-d3ef-458e-b9b6-d66a5cf39809.png) How to install
 
