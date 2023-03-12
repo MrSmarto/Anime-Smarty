@@ -18,4 +18,4 @@ Welkom! Dit is mijn respository voor mijn linking feature voor project-tech. Ani
 
 ## ![licence](https://user-images.githubusercontent.com/118122875/224570185-da93d583-8c14-4eee-bca6-f680ec919fc2.png) License
 
-MIT License
+I'm using a [MIT License]([https://www.google.com](https://github.com/cmda-bt/pt-course-22-23/blob/main/LICENSE))
