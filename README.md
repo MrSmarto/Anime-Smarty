@@ -1,4 +1,4 @@
-![Studio Shodwe (2000 x 1500 px) (2000 x 1000 px)](https://user-images.githubusercontent.com/118122875/219982131-c9d2aca3-8fa5-4940-88ae-1dfd5f800569.png)
+![15th](https://user-images.githubusercontent.com/118122875/224559625-04d4f8c7-c889-4c44-ade8-3c213bf06568.jpg)
 
 ## Anime Smarty
 
