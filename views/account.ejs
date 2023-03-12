@@ -5,11 +5,12 @@
 </header>
 <main>
     <% if (savedFilms.length > 0) { %>
+    <h2><div>opgeslagen films</div></h2>
     <ul>
         <% savedFilms.forEach(function(savedFilm) { %>
         <li class="filmslijstje">
-            <img src="../public/upload/images/movies/<%= savedFilm.photo %>" alt="<%= savedFilm.photo %>">
             <h2><%= savedFilm.title %></h2>
+            <img src="../public/upload/images/movies/<%= savedFilm.photo %>" alt="<%= savedFilm.photo %>">
             <form method="POST" action="/deleteSavedFilm">
                 <input type="hidden" name="filmId" value="<%= savedFilm.id %>">
                 <button class="buttonverwijderen" type="submit">Verwijderen</button>
