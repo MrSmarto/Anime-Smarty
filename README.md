@@ -10,21 +10,36 @@ Welkom! Dit is mijn respository voor mijn linking feature voor project-tech. Ani
 
 ### Pre-installation:
 
-Before you install the 'Anime Smart', make sure to install:
-* [Git](https://github.com/git-guides/install-git)
-* [node.js](https://nodejs.org/en/)
-* First type 'node install' in your terminal
-* Type 'node --version' the check if node is installed correctly
-> You'll recieve the what type of version you installed like:'v18.8.0' 
-* [NPM](https://docs.npmjs.com/cli/v6/commands/npm-install) 
 
-After that you can clone my respository:
+Before you install the `Anime Smart`, make sure to install:
+
+* [Git](https://github.com/git-guides/install-git)
+* First type `git install` in your terminal
+* Type `git --version` the check if node is installed correctly
+* [node.js](https://nodejs.org/en/)
+* First type `node install` in your terminal
+* Type `node --version` the check if node is installed correctly
+> You'll recieve the what type of version you installed like:`v18.8.0` 
+* [NPM](https://docs.npmjs.com/cli/v6/commands/npm-install)
+* First type `npm install` in your terminal
+* Type `npm --version` the check if node is installed correctly
+* [MongoDB](https://www.mongodb.com/blog)
+* This application is working with multiple databases.
+
+
+### App-installation:
+
+Clone my respository to your local device:
 
 ```
 
 git clone https://github.com/MrSmarto/BLOKTECH23
 
 ```
+Start the application:
+
+* Open your terminal 
+* In the terminal you type: 'npm start' to start [node.js](https://nodejs.org/en/)
 
 ## ![tech](https://user-images.githubusercontent.com/118122875/224570118-38da956b-ec96-4d47-8375-b5f07659883a.png) Technologies
 
@@ -32,7 +47,7 @@ git clone https://github.com/MrSmarto/BLOKTECH23
 | ------------- |:-------------:| ------------- |
 | Project Tech | GIT & Github | [respository](https://github.com/MrSmarto/BLOKTECH23) |
 | Frond-end Development | JS (ES6), EJS, html & CSS | Visual Studio Code |
-| Back-end Development | node.js | Visual Studio Code | Visual Studio Code |
+| Back-end Development | node.js | Visual Studio Code & MongoDB |
 
 ## ![licence](https://user-images.githubusercontent.com/118122875/224570185-da93d583-8c14-4eee-bca6-f680ec919fc2.png) License
 
