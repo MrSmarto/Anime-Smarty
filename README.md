@@ -47,7 +47,7 @@ Start the application:
 
 | Courses| language | editor |
 | ------------- |:-------------:| ------------- |
-| Project Tech | GIT & Github | [ School's respository](https://github.com/MrSmarto/BLOKTECH23) |
+| Project Tech | GIT & Github | [ School's respository](https://github.com/MrSmarto/BLOKTECH23/wiki) |
 | Frond-end Development | JS (ES6), EJS, html & CSS | Visual Studio Code |
 | Back-end Development | node.js | Visual Studio Code & MongoDB |
 
