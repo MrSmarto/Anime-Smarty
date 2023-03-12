@@ -13,6 +13,9 @@ Welkom! Dit is mijn respository voor mijn linking feature voor project-tech. Ani
 Before you install the 'Anime Smart', make sure to install:
 * [Git](https://github.com/git-guides/install-git)
 * [node.js](https://nodejs.org/en/)
+* First type 'node install' in your terminal
+* Type 'node --version' the check if node is installed correctly
+> You'll recieve the what type of version you installed like:'v18.8.0' 
 * [NPM](https://docs.npmjs.com/cli/v6/commands/npm-install) 
 
 After that you can clone my respository:
