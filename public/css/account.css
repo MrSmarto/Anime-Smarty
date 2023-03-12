@@ -39,6 +39,12 @@
 	font-family: var(--websitefont);;
   }
 
+  main {
+    margin-bottom: 7em;
+    margin-left: 1em;
+    margin-right: 1em;
+    }
+
   h1, h2, h3, p {
 	text-decoration: none;
   }
@@ -48,6 +54,9 @@
   }
 
   h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
     color: white;
   }
 
@@ -57,33 +66,6 @@
 
   a {
 	text-decoration: none;
-  }
-
-  main {
-	margin-bottom: 7em;
-  }
-
-/* public/css/account.css */
-
-body {
-    background: black;
-	font-family: var(--websitefont);;
-  }
-
-  main {
-    margin-left: 1em;
-	margin-right: 1em;
-  }
-
-  h1, h2, h3, p {
-	text-decoration: none;
-  }
-  
-  h1 {
-    font-size: 36px;
-    text-align: center;
-    margin-bottom: 30px;
-    color: white;
   }
 
   h2 div {
@@ -135,6 +117,73 @@ body {
     border: none;
     padding: 10px 45px;
     cursor: pointer;
+  }
+
+  /* SECTION 1 ACCOUNT GEGEVENS*/
+
+  main section:nth-of-type(1) {
+    text-align: center;
+  }
+
+  main section:nth-of-type(1) img{
+   height: 10em;
+   width: 7em;
+   border-radius: 1em;
+   border-style: solid;
+   border-color: white;
+  }
+
+  main section:nth-of-type(1) p{
+    color: white;
+   }
+
+   main section:nth-of-type(1) p:nth-of-type(1){
+    color: var(--secondairmain);
+    font-weight: bolder;
+   }
+
+  main section:nth-of-type(1) p:nth-of-type(2){
+    margin-top: 1em;
+    margin-bottom: 1em;
+   }
+
+   main section:nth-of-type(1) p:nth-of-type(2) span{
+    color: var(--primairmain);
+    font-weight: bolder;
+   }
+
+   main section:nth-of-type(1) p:nth-of-type(3){
+    margin-top: 1em;
+    margin-bottom: 1em;
+   }
+
+   main section:nth-of-type(1) p:nth-of-type(3) span{
+    color: var(--primairmain);
+    font-weight: bolder;
+   }
+
+   main section:nth-of-type(1) p:nth-of-type(4){
+    margin-top: 1em;
+    margin-bottom: 1em;
+   }
+
+   main section:nth-of-type(1) p:nth-of-type(4) span{
+    color: var(--primairmain);
+    font-weight: bolder;
+   }
+
+
+
+
+  /* Section 2 WAAR DE FILMS WORDEN INGELADEN */
+
+  main section:nth-of-type(2) {
+    margin-top: 2em;
+    text-align: center;
+    border-top: var(--secondairmain);
+    border-width: 1em;
+    border-style: solid;
+    padding: 10px;
   }
   
 

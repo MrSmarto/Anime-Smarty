@@ -4,23 +4,34 @@
     <h1>Mijn Account</h1>
 </header>
 <main>
-    <% if (savedFilms.length > 0) { %>
-    <h2><div>opgeslagen films</div></h2>
-    <ul>
-        <% savedFilms.forEach(function(savedFilm) { %>
-        <li class="filmslijstje">
-            <h2><%= savedFilm.title %></h2>
-            <img src="../public/upload/images/movies/<%= savedFilm.photo %>" alt="<%= savedFilm.photo %>">
-            <form method="POST" action="/deleteSavedFilm">
-                <input type="hidden" name="filmId" value="<%= savedFilm.id %>">
-                <button class="buttonverwijderen" type="submit">Verwijderen</button>
-            </form>
-        </li>
-        <% }); %>
-    </ul>
-    <% } else { %>
-    <p>Je hebt nog geen films opgeslagen.</p>
-    <% } %>
+    <section>
+        <p>account gegevens</p>
+        <p><span>profielfoto:</span></p>
+        <img src="../public/upload/images/accountfoto.JPG" alt="profielfoto">
+        <p><span>naam:</span><br> Thijmen Smart</p>
+        <p><span>vakken:</span><br> Project Tech, Back-end & Front-end</p>
+    </section>
+    <section>
+        <% if (savedFilms.length > 0) { %>
+        <h2>
+            <div>opgeslagen films</div>
+        </h2>
+        <ul>
+            <% savedFilms.forEach(function(savedFilm) { %>
+            <li class="filmslijstje">
+                <h2><%= savedFilm.title %></h2>
+                <img src="../public/upload/images/movies/<%= savedFilm.photo %>" alt="<%= savedFilm.photo %>">
+                <form method="POST" action="/deleteSavedFilm">
+                    <input type="hidden" name="filmId" value="<%= savedFilm.id %>">
+                    <button class="buttonverwijderen" type="submit">Verwijderen</button>
+                </form>
+            </li>
+            <% }); %>
+        </ul>
+        <% } else { %>
+        <p>Je hebt nog geen films opgeslagen.</p>
+        <% } %>
+    </section>
 </main>
 
 
