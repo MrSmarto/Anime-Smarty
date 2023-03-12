@@ -159,11 +159,12 @@ app.use(function (req, res) {
 // Verbinding maken met de MongoDB-database
 async function connectDB() {
   console.log('connecting')
-  const uri = 'mongodb+srv://Thijmen:Asvdedijk1@databasethijmen.qtu3hie.mongodb.net/?retryWrites=true&w=majority'
+  const uri = `mongodb+srv://Thijmen:${process.env.MONGO_PASSWORD}@databasethijmen.qtu3hie.mongodb.net/?retryWrites=true&w=majority`
   const client = new MongoClient(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
+
   try {
     console.log('awaiting connect');
     await client.connect();
