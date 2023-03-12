@@ -10,9 +10,9 @@ Welkom! Dit is mijn respository voor mijn linking feature voor project-tech. Ani
 
 ## ![tech](https://user-images.githubusercontent.com/118122875/224570118-38da956b-ec96-4d47-8375-b5f07659883a.png) Technologies
 
-| Courses       | Are           |
+| Courses| language |
 | ------------- |:-------------:|
-| Project Tech      | GIT & Github |
+| Project Tech | GIT & Github |
 | Frond-end Development | JS (ES6), EJS, html & CSS |
 | Back-end Development | node.js |
 
