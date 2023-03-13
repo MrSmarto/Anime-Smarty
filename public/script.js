@@ -24,3 +24,4 @@ fetch('https://animechan.vercel.app/api/random')
   h2.innerHTML = data.character;
   h3.innerHTML = data.quote;
 })
+
