@@ -40,12 +40,12 @@ Before you install the `Anime Smart`, make sure to install:
 | ID: | (I recommend you to use number like: 1,2,3....) | 
 
 ```
-add atleast `4 different items` into your collection `DataFilms`
+4. add atleast `4 different items` into your collection `DataFilms`
 ```
 
-4. Then you'll create the second collection called: `"savedFilms"`. In this collection we will store the information about the movies that the user wants to save.
+5. Then you'll create the second collection called: `"savedFilms"`. In this collection we will store the information about the movies that the user wants to save.
 >  Using the correct names given in this tutorial, for the `collection` is super important!
-### env.
+### [env.](https://www.codementor.io/@parthibakumarmurugesan/what-is-env-how-to-set-up-and-run-a-env-file-in-node-1pnyxw9yxj)
 * Once you have created the databases you'll need to create an .env in the root of the folder you work from, for this application. This .env file should contain one variable.
 ```
 MONGO_PASSWORD=yourpassword
@@ -67,7 +67,7 @@ When you cloned this repository, created a replica of the database and added the
 * First type `npm install` in your terminal
 * Type `npm --version` the check if node is installed correctly
 
-### Open your terminal 
+### [Open your terminal](https://support.apple.com/nl-nl/guide/terminal/welcome/mac)
 * In the terminal you type: `npm start` to start [node.js](https://nodejs.org/en/) server, which will start the Anime Smart on the web.
 * The website should be visible with the link underneath:
 ```
