@@ -22,11 +22,34 @@ Before you install the `Anime Smart`, make sure to install:
 * First type `node install` in your terminal
 * Type `node --version` the check if node is installed correctly
 > You'll recieve the what type of version you installed like:`v18.8.0` 
-### [NPM](https://docs.npmjs.com/cli/v6/commands/npm-install)
-* First type `npm install` in your terminal
-* Type `npm --version` the check if node is installed correctly
 ### [MongoDB](https://www.mongodb.com/blog)
-* This application is working with multiple databases. I use [MongoDB](https://www.mongodb.com/blog) to save up the data (information) about the animes in collection: `"Data Films"`. Once a user made a decision to `like` an anime, they will be able to save them in collection: `"savedFilms"`.
+* Before you can start Anime Smarty you'll need to create a database with multiple collections. I use [MongoDB](https://www.mongodb.com/blog) to save up the data (information) for this application. Follow the steps underneath, you can also follow this [tutorial](https://www.mongodb.com/docs/atlas/getting-started/):
+1. Create a cluster, i would recommend you to use the name cluster0
+2. Create a database, choose your own name
+3. Then you'll create the first collection called: `"DataFilms"`. In this collection we will store the information about the movies that we render in our application. Use the following template to set up your collection:
+>  Using the correct names given in this tutorial, for the `collection` is super important!
+
+| 'Field' (input)| 'Value' (input)| 
+| ------------- |:-------------:|
+| _ID (Automatic generated) | Random number made by mongoDB |
+| title: | (You can put any title name here) | 
+| episodes: | (You can put the amount of episodes here) | 
+| release: | (You can put the release year (date) here | 
+| descriptions: | (You can put any descriptions here) | 
+| photo: | (example: "onepiece.jpg") | 
+| ID: | (I recommend you to use number like: 1,2,3....) | 
+
+```
+add atleast `4 different items` into your collection `DataFilms`
+```
+
+4. Then you'll create the second collection called: `"savedFilms"`. In this collection we will store the information about the movies that the user wants to save.
+>  Using the correct names given in this tutorial, for the `collection` is super important!
+### env.
+* Once you have created the databases you'll need to create an .env in the root of the folder you work from, for this application. This .env file should contain one variable.
+```
+MONGO_PASSWORD=yourpassword
+```
 
 
 ### App-installation:
@@ -38,10 +61,22 @@ Clone my respository to your local device:
 git clone https://github.com/MrSmarto/BLOKTECH23
 
 ```
-Start the application:
 
-* Open your terminal 
-* In the terminal you type: 'npm start' to start [node.js](https://nodejs.org/en/)
+When you cloned this repository, created a replica of the database and added the env. file make sure to follow the following steps:
+### [NPM](https://docs.npmjs.com/cli/v6/commands/npm-install)
+* First type `npm install` in your terminal
+* Type `npm --version` the check if node is installed correctly
+
+### Open your terminal 
+* In the terminal you type: `npm start` to start [node.js](https://nodejs.org/en/) server, which will start the Anime Smart on the web.
+* The website should be visible with the link underneath:
+```
+
+http://localhost:1900/
+
+```
+
+* Anime Smart only works for a mobile screen so make sure you switch to a mobile screens. You'll will be able to do this to open the inspector tool on google chrome by the following code for mac OS: `Option + ⌘ + J`, and the following code for windows: `Shift + CTRL + J on Windows)`.
 
 ## ![tech](https://user-images.githubusercontent.com/118122875/224570118-38da956b-ec96-4d47-8375-b5f07659883a.png) Technologies
 
