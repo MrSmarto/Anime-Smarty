@@ -15,18 +15,18 @@ Anime Smarty is an application where you'll be able to choose your preferenced a
 
 Before you install the `Anime Smart`, make sure to install:
 
-* [Git](https://github.com/git-guides/install-git)
+### [Git](https://github.com/git-guides/install-git)
 * First type `git install` in your terminal
 * Type `git --version` the check if node is installed correctly
-* [node.js](https://nodejs.org/en/)
+### [node.js](https://nodejs.org/en/)
 * First type `node install` in your terminal
 * Type `node --version` the check if node is installed correctly
 > You'll recieve the what type of version you installed like:`v18.8.0` 
-* [NPM](https://docs.npmjs.com/cli/v6/commands/npm-install)
+### [NPM](https://docs.npmjs.com/cli/v6/commands/npm-install)
 * First type `npm install` in your terminal
 * Type `npm --version` the check if node is installed correctly
-* [MongoDB](https://www.mongodb.com/blog)
-* This application is working with multiple databases.
+### [MongoDB](https://www.mongodb.com/blog)
+* This application is working with multiple databases. I use [MongoDB](https://www.mongodb.com/blog) to save up the data (information) about the animes in collection: `"Data Films"`. Once a user made a decision to `like` an anime, they will be able to save them in collection: `"savedFilms"`.
 
 
 ### App-installation:
