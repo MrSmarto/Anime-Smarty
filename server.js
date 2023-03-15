@@ -10,10 +10,17 @@ const bodyParser = require('body-parser');
 
 //midlewear
 
+// Stel een map "/public" beschikbaar voor statische bestanden
 app.use("/public", express.static('public'));
+
+// Gebruik body-parser middleware om formuliergegevens te parseren
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// Gebruik EJS als de standaard view engine
 app.set('view engine', 'ejs');
-dotenv.config(); // Laad de data van de .env bestand
+
+// Laad de data van de .env bestand
+dotenv.config(); 
 
 
 //Routes 
