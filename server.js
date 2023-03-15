@@ -7,8 +7,6 @@ const port = 1900;
 const { MongoClient } = require("mongodb");
 const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
-// const xss = require('xss')
-
 
 //midlewear
 
@@ -150,7 +148,7 @@ app.post('/deleteSavedFilm', async (req, res) => {
 
 app.use(function (req, res) {
   res.locals.title = "Error 404"
-  res.locals.css = "";
+  res.locals.css = '/public/css/404.css';
   res.status(404).render('404', {
     path: 'Error'
   });

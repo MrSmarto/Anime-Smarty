@@ -1,0 +1,82 @@
+*, *::after, *::before {
+	box-sizing:border-box;  
+	margin: 0;
+	padding: 0;
+  }
+  
+  button:not(disabled) {
+	cursor:pointer;
+  }
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+/* https://dlo.mijnhva.nl/d2l/le/content/437099/Home */
+:root {
+	--zwartmain:#000000;
+    --primairmain:#7ED957;
+    --secondairmain:#5CE1E6;
+    --textkleur1:#707070;
+    --textkleur1:#53616A;
+
+	/* Shadow */
+	/* Bron: https://www.joshwcomeau.com/gradient-generator/ */
+	--shadowvoorblok:
+      0 0 .125em var(--zwartmain),
+      0 0 .25em var(--primairmain),
+      0 0 .5em var(--zwartmain);
+
+	  /* fonts */
+	--websitefont: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+img.achtergrond {
+    width: 95%;
+    position: absolute;
+    left: 1em;
+    top: 6em;
+}
+
+img.tekst {
+    width: 40%;
+    position: absolute;
+    top: 11em;
+    left: 7em;
+    animation-name: schudden;
+	  animation-duration:1.5s;
+	  animation-iteration-count:infinite;
+	  animation-direction:alternate;
+	  animation-timing-function:cubic-bezier(0.125, 0.995, 1.000, 1);
+	  animation-play-state: running;
+}
+
+img.tekst404 {
+    width: 40%;
+    position: absolute;
+    top: 30em;
+    left: 7em;
+    
+}
+
+@keyframes schudden {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
