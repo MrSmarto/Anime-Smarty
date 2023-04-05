@@ -3,56 +3,56 @@
 <header>
     <h1>Mijn Account</h1>
 </header>
-<main>
-    <section>
-        <p>account gegevens</p>
-        <p><span>profielfoto:</span></p>
-        <img src="../public/upload/images/accountfoto.JPG" alt="profielfoto">
-        <p><span>naam:</span><br> Thijmen Smart</p>
-        <p><span>vakken:</span><br> Project Tech, Back-end & Front-end</p>
-    </section>
-    <section>
-        <% if (savedFilms.length > 0) { %>
-        <h2>
-            <div>opgeslagen films</div>
-        </h2>
-        <ul>
-            <% savedFilms.forEach(function(savedFilm) { %>
-            <li class="filmslijstje">
-                <h2><%= savedFilm.title %></h2>
-                <img src="../public/upload/images/movies/<%= savedFilm.photo %>" alt="<%= savedFilm.photo %>">
-                <form method="POST" action="/deleteSavedFilm">
-                    <input type="hidden" name="filmId" value="<%= savedFilm.id %>">
-                    <button class="buttonverwijderen" type="submit">Verwijderen</button>
-                </form>
-            </li>
-            <% }); %>
-        </ul>
-        <% } else { %>
-        <p><strong>Je hebt nog geen films opgeslagen.</strong><br><span>volg de stappen hieronder om een anime toe te voegen</span></p>
-        <img src="../public/upload/images/zerostate1.jpg" alt="uitleg hoe je een anime opslaat"
-        <% } %>
-    </section>
-</main>
 
-
-
-
-<footer>
-    <nav>
-        <ul>
-            <a href="/">
-                <li>
-                    <img src="../public/upload/images/homewit.png" alt="Logo">
-                    <p><span>Home</span></p>
+<body>
+    <main>
+        <section>
+            <p>account gegevens</p>
+            <p><span>profielfoto:</span></p>
+            <img src="../public/upload/images/accountfoto.JPG" alt="profielfoto">
+            <p><span>naam:</span><br> Thijmen Smart</p>
+            <p><span>vakken:</span><br> Project Tech, Back-end & Front-end</p>
+        </section>
+        <section>
+            <% if (savedFilms.length > 0) { %>
+            <h2>
+                <div>opgeslagen films</div>
+            </h2>
+            <ul>
+                <% savedFilms.forEach(function(savedFilm) { %>
+                <li class="filmslijstje">
+                    <h2><%= savedFilm.title %></h2>
+                    <img src="../public/upload/images/movies/<%= savedFilm.photo %>" alt="<%= savedFilm.photo %>">
+                    <form method="POST" action="/deleteSavedFilm">
+                        <input type="hidden" name="filmId" value="<%= savedFilm.id %>">
+                        <button class="buttonverwijderen" type="submit">Verwijderen</button>
+                    </form>
                 </li>
-            </a>
-            <a href="/account">
-                <li>
-                    <img src="../public/upload/images/accountgroen.png" alt="Logo">
-                    <p><span>Account</span></p>
-                </li>
-            </a>
-        </ul>
-    </nav>
-</footer>
+                <% }); %>
+            </ul>
+            <% } else { %>
+            <p><strong>Je hebt nog geen films opgeslagen.</strong><br><span>volg de stappen hieronder om een anime toe
+                    te voegen</span></p>
+            <img src="../public/upload/images/zerostate1.jpg" alt="uitleg hoe je een anime opslaat"
+                class="scroll-animation" <% } %> </section> 
+    </main>
+     <footer>
+        <nav>
+            <ul>
+                <a href="/">
+                    <li>
+                        <img src="../public/upload/images/homewit.png" alt="Logo">
+                        <p><span>Home</span></p>
+                    </li>
+                </a>
+                <a href="/account">
+                    <li>
+                        <img src="../public/upload/images/accountgroen.png" alt="Logo">
+                        <p><span>Account</span></p>
+                    </li>
+                </a>
+            </ul>
+        </nav>
+    </footer>
+    <script defer src="../public/script.js"></script>
+</body>
