@@ -25,9 +25,9 @@ fetch('https://animechan.vercel.app/api/random')
   h3.innerHTML = data.quote;
 })
 
-
+  // AFBEELDINGEN INLADEN
+  
 document.addEventListener('DOMContentLoaded', function() {
-  // LUI LADEN VAN AFBEELDINGEN
 
   // Maak een functie om de observer callback uit te voeren
   // observer: de observer zelf
@@ -36,8 +36,11 @@ document.addEventListener('DOMContentLoaded', function() {
     entries.forEach(entry => { // voor elk geobserveerd element
       if (entry.isIntersecting) { // als het element zichtbaar is in de viewport
         const img = entry.target; // krijg het afbeeldingselement
+        console.log('Afbeelding zichtbaar in viewport:', img); // log het afbeeldingselement dat zichtbaar is in de viewport
         img.src = img.dataset.src; // zet de afbeeldingsbron van het data-src attribuut
+        console.log('Afbeeldingsbron ingesteld op:', img.src); // log de nieuwe afbeeldingsbron
         observer.unobserve(img); // stop met het observeren van dit afbeeldingselement
+        console.log('Observeren gestopt voor afbeelding:', img); // log het afbeeldingselement waarvoor het observeren is gestopt
       }
     });
   }
@@ -51,39 +54,39 @@ document.addEventListener('DOMContentLoaded', function() {
   // Voeg elk afbeeldingselement toe aan de observer
   lazyImages.forEach(image => {
     lazyLoadObserver.observe(image);
+    console.log('Afbeelding toegevoegd aan observer:', image); // log het afbeeldingselement dat is toegevoegd aan de observer
   });
 });
 
-// ANIMATIE BIJ HET NAAR BENEDEN SCROLLEN
+// VIDEO
+document.addEventListener("DOMContentLoaded", function () {
+  // Vind de video op de pagina
+  const video = document.querySelector("main .promovideo video");
 
-// Maak een functie om de observer callback uit te voeren voor scroll-animaties
-// observer: de observer zelf
-// entries: de geobserveerde elementen
-function scrollAnimationCallback(entries, observer) {
-  entries.forEach(entry => { // voor elk geobserveerd element
-    const animatedElement = entry.target; // krijg het element dat geanimeerd moet worden
-    
-    // Update animatieduur op basis van de intersectionRatio
-    const animationDuration = entry.intersectionRatio * 1.5;
-    animatedElement.style.animationDuration = `${animationDuration}s`;
+  // Functie om het observeren van de video te initialiseren
+  function initObserver() {
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5, // Zichtbaarheid drempel om te bepalen of de video moet worden afgespeeld of gepauzeerd
+    };
 
-    if (entry.isIntersecting) { // als het element zichtbaar is in de viewport
-      animatedElement.classList.add('start-animation'); // voeg de start-animation klasse toe
-    } else {
-      animatedElement.classList.remove('start-animation'); // verwijder de start-animation klasse als het element niet meer zichtbaar is
-    }
-  });
-}
+    const observerCallback = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          video.play();
+          console.log("Video is zichtbaar en wordt afgespeeld.");
+        } else {
+          video.pause();
+          console.log("Video is niet zichtbaar en wordt gepauzeerd.");
+        }
+      });
+    };
 
-// Maak een nieuwe IntersectionObserver instance voor scroll-animaties
-const scrollAnimationObserver = new IntersectionObserver(scrollAnimationCallback, { threshold: 0.1 });
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    observer.observe(video);
+  }
 
-// Selecteer alle elementen met de .scroll-animation class
-const scrollAnimationElements = document.querySelectorAll('.scroll-animation');
-
-// Voeg elk geanimeerd element toe aan de observer
-scrollAnimationElements.forEach(element => {
-  scrollAnimationObserver.observe(element);
+  // Initialiseer de Intersection Observer
+  initObserver();
 });
-
-
