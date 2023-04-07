@@ -225,7 +225,7 @@ button {
 	font: 0.1em;
 	margin-bottom: 0.5em;
 	text-align: center;
-	animation: fadeInDown1 3s ease-out;
+	animation: fadeInRight 3s ease-out;
   }
 
   main section:nth-of-type(3) h2 {
@@ -233,15 +233,18 @@ button {
 	font: 0.5em;
 	margin-bottom: 0.5em;
 	text-align: center;
-	animation: fadeInDown2 4.5s ease-out;
+	animation: fadeInLeft 4.5s ease-out;
   }
 
   main section:nth-of-type(3) h3 {
 	color: wheat;
 	font: 0.5em;
 	text-align: center;
-	animation: fadeInDown3 6s ease-out;
+	overflow: hidden;
+	animation: fadeInUp 6s ease-out;
   }
+  
+  
 
   main section:nth-of-type(3) {
     display: flex;
@@ -249,40 +252,41 @@ button {
     align-items: center;
   }
 
-  
 
-  @keyframes fadeInDown1 {
+@keyframes fadeInLeft {
 	0% {
 	  opacity: 0;
-	  transform: translateY(-20px);
+	  transform: translateX(-100%);
+	}
+	100% {
+	  opacity: 1;
+	  transform: translateX(0);
+	}
+  }
+  
+  
+  @keyframes fadeInRight {
+	0% {
+	  opacity: 0;
+	  transform: translateX(100%);
+	}
+	100% {
+	  opacity: 1;
+	  transform: translateX(0);
+	}
+  }
+  
+ 
+  @keyframes fadeInUp {
+	0% {
+	  opacity: 0;
+	  transform: translateY(100%);
 	}
 	100% {
 	  opacity: 1;
 	  transform: translateY(0);
 	}
   }
-  
-  @keyframes fadeInDown2 {
-	0% {
-	  opacity: 0;
-	  transform: translateY(-20px);
-	}
-	100% {
-	  opacity: 1;
-	  transform: translateY(0);
-	}
-  }
-  
-  @keyframes fadeInDown3 {
-	0% {
-	  opacity: 0;
-	  transform: translateY(-20px);
-	}
-	100% {
-	  opacity: 1;
-	  transform: translateY(0);
-	}
-}
   
 
 /* SECTION "JOUW KIJKLIJST" */

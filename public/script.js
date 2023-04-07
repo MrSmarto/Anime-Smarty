@@ -31,6 +31,24 @@ function fetchDataFromApi() {
     });
 }
 
+// Om de animaties opnieuw te kunnen gebruiken
+
+function restartAnimations() {
+  const h1 = document.querySelector("main section:nth-of-type(3) h1");
+  const h2 = document.querySelector("main section:nth-of-type(3) h2");
+  const h3 = document.querySelector("main section:nth-of-type(3) h3");
+
+  h1.style.animation = "none";
+  h2.style.animation = "none";
+  h3.style.animation = "none";
+
+  setTimeout(() => {
+    h1.style.animation = "";
+    h2.style.animation = "";
+    h3.style.animation = "";
+  }, 50);
+}
+
 
 
 
@@ -107,8 +125,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// API anichan | met API Intersection Observer API TEST
-
 let dataInterval;
 
 function clearData() {
@@ -142,6 +158,9 @@ function initApiSectionObserver() {
             // Log een bericht wanneer er nieuwe data wordt opgehaald
             console.log("Nieuwe ANIME QUOTES ophalen...");
 
+            // Reset de animaties
+            restartAnimations();
+
             // Haal de data op van de API
             fetchDataFromApi();
           }, 7000);
@@ -164,9 +183,9 @@ function initApiSectionObserver() {
   observer.observe(apiSection);
 }
 
-
 document.addEventListener("DOMContentLoaded", function () {
   // Initialiseer de Intersection Observer
   initApiSectionObserver();
 });
+
 
