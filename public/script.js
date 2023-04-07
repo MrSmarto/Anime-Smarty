@@ -127,10 +127,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 let dataInterval;
 
-function clearData() {
-  // Voeg hier de logica toe om de data op het scherm te verwijderen
-}
-
 function initApiSectionObserver() {
   // Selecteer de API-sectie in de DOM
   const apiSection = document.querySelector("main section:nth-of-type(3)");
