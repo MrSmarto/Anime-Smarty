@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
+// API chan | + Intersection Observer API TEST
 
 let dataInterval;
 
