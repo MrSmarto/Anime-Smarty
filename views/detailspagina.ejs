@@ -25,7 +25,7 @@
         <p><strong>Afleveringen:</strong> <br> <%= film.episodes %></p>
         <p><strong>Releasedatum:</strong> <br> <%= film.release %></p>
         <p><strong>Beschrijving:</strong> <br> <%= film.descriptions %></p>
-        <img src="../public/upload/images/movies/<%= film.photo %>" alt="<%= film.title %>">
+        <img data-src="../public/upload/images/movies/<%= film.photo %>" class="lazy-image" src="" alt="<%= film.title %>">
     </main>
 
     <footer>
@@ -36,7 +36,7 @@
     </footer>
 
 
-
+    <script defer src="../public/script.js"></script>
 </body>
 
 </html>

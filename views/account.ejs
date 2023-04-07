@@ -9,7 +9,7 @@
         <section>
             <p>account gegevens</p>
             <p><span>profielfoto:</span></p>
-            <img src="../public/upload/images/accountfoto.JPG" alt="profielfoto">
+            <img src="../public/upload/images/accountfoto.JPG" src="" alt="profielfoto">
             <p><span>naam:</span><br> Thijmen Smart</p>
             <p><span>vakken:</span><br> Project Tech, Back-end & Front-end</p>
         </section>
@@ -22,7 +22,7 @@
                 <% savedFilms.forEach(function(savedFilm) { %>
                 <li class="filmslijstje">
                     <h2><%= savedFilm.title %></h2>
-                    <img src="../public/upload/images/movies/<%= savedFilm.photo %>" alt="<%= savedFilm.photo %>">
+                    <img data-src="../public/upload/images/movies/<%= savedFilm.photo %>" src="" class="lazy-image" alt="<%= savedFilm.photo %>">
                     <form method="POST" action="/deleteSavedFilm">
                         <input type="hidden" name="filmId" value="<%= savedFilm.id %>">
                         <button class="buttonverwijderen" type="submit">Verwijderen</button>
@@ -34,7 +34,7 @@
             <p><strong>Je hebt nog geen films opgeslagen.</strong><br><span>volg de stappen hieronder om een anime toe
                     te voegen</span></p>
             <img src="../public/upload/images/zerostate1.jpg" alt="uitleg hoe je een anime opslaat"
-                class="scroll-animation" <% } %> </section> 
+            <% } %> </section> 
     </main>
      <footer>
         <nav>
