@@ -10,22 +10,31 @@ button.addEventListener('click', function() {
 button.textContent = 'Geklikt!';
 });
 
+
+
+
 // API
 
-const h1 = document.querySelector('section:nth-of-type(3) h1');
-const h2 = document.querySelector('section:nth-of-type(3) h2');
-const h3 = document.querySelector('section:nth-of-type(3) h3');
+function fetchDataFromApi() {
+  // Selecteer de h1, h2 en h3 elementen binnen deze functie
+  const h1 = document.querySelector("main section:nth-of-type(3) h1");
+  const h2 = document.querySelector("main section:nth-of-type(3) h2");
+  const h3 = document.querySelector("main section:nth-of-type(3) h3");
 
-fetch('https://animechan.vercel.app/api/random')
-    .then(response => response.json())
-    .then(data => {
-  console.log(data);
-  h1.innerHTML = data.anime;
-  h2.innerHTML = data.character;
-  h3.innerHTML = data.quote;
-})
+  fetch("https://animechan.vercel.app/api/random")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      h1.innerHTML = data.anime;
+      h2.innerHTML = data.character;
+      h3.innerHTML = data.quote;
+    });
+}
 
-  // AFBEELDINGEN INLADEN
+
+
+
+// AFBEELDINGEN INLADEN | Intersection Observer API TEST
   
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -58,7 +67,11 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// VIDEO
+
+
+
+// VIDEO | Intersection Observer API TEST
+
 document.addEventListener("DOMContentLoaded", function () {
   // Vind de video op de pagina
   const video = document.querySelector("main .promovideo video");
@@ -90,3 +103,70 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initialiseer de Intersection Observer
   initObserver();
 });
+
+
+
+
+// API anichan | met API Intersection Observer API TEST
+
+let dataInterval;
+
+function clearData() {
+  // Voeg hier de logica toe om de data op het scherm te verwijderen
+}
+
+function initApiSectionObserver() {
+  // Selecteer de API-sectie in de DOM
+  const apiSection = document.querySelector("main section:nth-of-type(3)");
+
+  // Definieer de opties voor de Intersection Observer
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1,
+  };
+
+  // Definieer de callback-functie voor de Intersection Observer
+  const observerCallback = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Log een bericht wanneer de API-sectie zichtbaar is
+        console.log("ANIME QUOTES API is zichtbaar in de viewport.");
+
+        if (!dataInterval) {
+          // Haal de data op van de API
+          fetchDataFromApi();
+
+          // Start het interval om elke 7 seconden nieuwe data op te halen
+          dataInterval = setInterval(() => {
+            // Log een bericht wanneer er nieuwe data wordt opgehaald
+            console.log("Nieuwe ANIME QUOTES ophalen...");
+
+            // Haal de data op van de API
+            fetchDataFromApi();
+          }, 7000);
+        }
+      } else {
+        // Log een bericht wanneer de API-sectie niet zichtbaar is
+        console.log("ANIME QUOTES API is niet zichtbaar in de viewport.");
+
+        // Stop het interval om nieuwe data op te halen
+        clearInterval(dataInterval);
+        dataInterval = null;
+      }
+    });
+  };
+
+  // Maak een nieuwe Intersection Observer
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+  // Begin met het observeren van de API-sectie
+  observer.observe(apiSection);
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Initialiseer de Intersection Observer
+  initApiSectionObserver();
+});
+

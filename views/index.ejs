@@ -1,72 +1,72 @@
 <%- include('header.ejs') %>
-<main>
-    <section class="promovideo">
 
-        <video control src="../public/upload/video's/ROAD OF NARUTO NARUTO 20th Anniversary Trailer VIZ.mp4"
-            alt="Achtergrond video van naruto homepagina" autoplay loop>
-        </video>
-        <section>
-            <h2>Naruto</h2>
+<body>
+    <main>
+        <section class="promovideo">
+            <video control src="../public/upload/video's/ROAD OF NARUTO NARUTO 20th Anniversary Trailer VIZ.mp4"
+                alt="Achtergrond video van naruto homepagina" autoplay loop muted></video>
             <section>
-                <a href="/">
-                    <button class="btn1">
-                        <img src="../public/upload/images/playgroen.png" alt="Afspelen" />
-                        Afspelen
-                    </button>
-                </a>
-                <a href="/account">
-                    <button class="btn2">
-                        <img src="../public/upload/images/pluswit.png" alt="Afspelen" />
-                        Toevoegen
-                    </button>
-                </a>
+                <h2>Naruto</h2>
+                <section>
+                    <a href="/">
+                        <button class="btn1">
+                            <img src="../public/upload/images/playgroen.png" alt="Afspelen" />
+                            Afspelen
+                        </button>
+                    </a>
+                    <a href="/account">
+                        <button class="btn2">
+                            <img src="../public/upload/images/pluswit.png" alt="Afspelen" />
+                            Toevoegen
+                        </button>
+                    </a>
+                </section>
             </section>
         </section>
-    </section>
-    <section>
-        <h2>Nieuwste films</h2>
-        <ul>
-            <% films.forEach(function(film) { %>
-            <li>
-                <a href="/detailspagina/<%= film.id %>">
-                    <h3><%= film.title %></h3>
-                    <!-- Voeg een data-src attribuut toe om de afbeeldingsbron op te slaan -->
-                    <img data-src="../public/upload/images/movies/<%= film.photo %>" src="" alt="<%= film.title %>"
-                    class="lazy-image">
+        <section>
+            <h2>Nieuwste films</h2>
+            <ul>
+                <% films.forEach(function(film) { %>
+                <li>
+                    <a href="/detailspagina/<%= film.id %>">
+                        <h3><%= film.title %></h3>
+                        <!-- Voeg een data-src attribuut toe om de afbeeldingsbron op te slaan -->
+                        <img data-src="../public/upload/images/movies/<%= film.photo %>" src="" alt="<%= film.title %>"
+                            class="lazy-image">
+                    </a>
+                </li>
+                <% }); %>
+            </ul>
+        </section>
+        <section>
+            <p><span>De Quote van de dag</span></p><br>
+            <p><span>Anime:</span></p><br>
+            <h1></h1>
+            <p><span>Character:</span></p><br>
+            <h2></h2>
+            <p><span>Quote:</span></p><br>
+            <h3></h3>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <a href="/">
+                    <li>
+                        <img src="../public/upload/images/homegroen.png" alt="Logo">
+                        <p><span>Home</span></p>
+                    </li>
                 </a>
-            </li>
-            <% }); %>
-        </ul>
-    </section>
-    <section>
-        <p><span>De Quote van de dag</span></p><br>
-        <p><span>Anime:</span></p><br>
-        <h1></h1>
-        <p><span>Character:</span></p><br>
-        <h2></h2>
-        <p><span>Quote:</span></p><br>
-        <h3></h3>
-    </section>
-</main>
-<footer>
-    <nav>
-        <ul>
-            <a href="/">
-                <li>
-                    <img src="../public/upload/images/homegroen.png" alt="Logo">
-                    <p><span>Home</span></p>
-                </li>
-            </a>
-            <a href="/account">
-                <li>
-                    <img src="/public/upload/images/accountwit.png" alt="Logo">
-                    <p><span>Account</span></p>
-                </li>
-            </a>
-        </ul>
-    </nav>
-</footer>
-<script defer src="../public/script.js"></script>
+                <a href="/account">
+                    <li>
+                        <img src="/public/upload/images/accountwit.png" alt="Logo">
+                        <p><span>Account</span></p>
+                    </li>
+                </a>
+            </ul>
+        </nav>
+    </footer>
+    <script defer src="../public/script.js"></script>
 </body>
 
 </html>
